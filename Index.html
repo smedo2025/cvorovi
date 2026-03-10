@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Katalog 18 Čvorova</title>
+    <style>
+        :root { 
+            --bg: #0f172a; 
+            --card: #1e293b; 
+            --accent: #38bdf8; 
+            --text: #f8fafc; 
+        }
+        
+        body { 
+            font-family: sans-serif; 
+            background-color: var(--bg); 
+            color: var(--text); 
+            padding: 20px; 
+            margin: 0;
+        }
+
+        .container { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+            gap: 20px; 
+            transition: all 0.3s ease;
+        }
+
+        .card { 
+            background: var(--card); 
+            border-radius: 12px; 
+            padding: 15px; 
+            border: 1px solid rgba(255,255,255,0.1); 
+            display: flex; 
+            flex-direction: column; 
+            cursor: pointer;
+            transition: transform 0.3s ease, z-index 0.3s ease;
+            position: relative;
+        }
+
+        .card h2 { 
+            font-size: 0.9rem; 
+            text-align: center; 
+            color: var(--accent); 
+            min-height: 40px; 
+            margin-top: 0;
+        }
+
+        /* DODANO: position relative za pozicioniranje vodenog žiga */
+        .img-container { 
+            position: relative;
+            width: 100%; 
+            height: 200px; 
+            background: white; 
+            border-radius: 8px; 
+            margin-bottom: 10px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            overflow: hidden;
+        }
+
+        /* NOVO: Stil za "SA" tekst (simulacija rukopisa) */
+        .watermark {
+            position: absolute;
+            top: 5px;
+            left: 8px;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 0.75rem;
+            color: rgba(0, 0, 0, 0.4);
+            font-weight: bold;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .img-container img { 
+            max-width: 95%; 
+            max-height: 95%; 
+            object-fit: contain; 
+        }
+
+        .btn { 
+            text-align: center; 
+            padding: 8px; 
+            border: 1px solid var(--accent); 
+            color: var(--accent); 
+            text-decoration: none; 
+            border-radius: 6px; 
+            font-size: 0.8rem; 
+            transition: background 0.2s;
+            margin-bottom: 5px;
+        }
+
+        .btn:hover {
+            background: rgba(56, 189, 248, 0.1);
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 999;
+            cursor: zoom-out;
+        }
+
+        .card.zoomed {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1.4);
+            z-index: 1000;
+            width: 320px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            cursor: zoom-out;
+        }
+
+        @media (max-width: 480px) {
+            .card.zoomed {
+                width: 85%;
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="overlay"></div>
+
+<div class="container">
+    <div class="card">
+        <h2>TENT TIE KNOT</h2>
+        <div class="img-container"><span class="watermark">SA</span><img src="slike/TENT TIE KNOT.jpg" alt="Tent Tie Knot"></div>
+        <a href="https://www.youtube.com/watch?v=v_PKf5P7oXU" class="btn" target="_blank">VIDEO</a>
+    </div>
+
+    <div class="card">
+        <h2>TENT KNOT</h2>
+        <div class="img-container"><span class="watermark">SA</span><img src="slike/TENT KNOT.jpg" alt="Tent Knot"></div>
+        <a href="https://www.youtube.com/shorts/prtojfiezPo" class="btn" target="_blank">VIDEO</a>
+    </div>
+
+    <div class="card">
+        <h2>CLOVE HITCH</h2>
+        <div class="img-container"><span class="watermark">SA</span><img src="slike/CLOVE HITCH.jpg" alt="Clove Hitch"></div>
+        <a href="https://www.youtube.com/shorts/eeilAuE7rI0" class="btn" target="_blank">VIDEO</a>
+    </div>
+
+    <div class="card">
+        <h2>CONSTRICTORS KNOT</h2>
+        <div class="img-container"><span class="watermark">SA</span><img src="slike/CONSTRICTORS KNOT.jpg" alt="Constrictors Knot"></div>
+        <a href="https://www.youtube.com/shorts/jzsa4NEwEsI" class="btn" target="_blank">VIDEO</a>
+    </div>
+
+    <div class="card">
+        <h2>CONSTRICTORS KNOT ON POST</h2>
+        <div class="img-container"><span class="watermark">SA</span><img src="slike/CONSTRICTORS KNOT ON POST.jpg" alt="Constrictors Knot On Post"></div>
+        <a href="https://www.youtube.com/shorts/zCZDmS1ijkU" class="btn" target="_blank">VIDEO</a>
+    </div>
+
+    <div class="card">
+        <h2>ALPINE BUTTERFLY</h2>
+        <div class="img-container"><span class="watermark">SA</span><img src="slike/ALPINE BUTTERFLY.jpg" alt="Alpine Butterfly"></div>
+        <a href="https://www.youtube.com/shorts/KMvidgP-KGc" class="btn" target="_blank">VIDEO</a>
+    </div>
+
+    <div class="card">
+        <h2>BOWLINE</h2>
+        <div class="img-container"><span class="watermark">SA</span><img src="slike/BOWLINE.jpg" alt="Bowline"></div>
+        <a href="https://www.youtube.com/shorts/ChHLY9Ol-Ls" class="btn" target="_blank">VIDEO1</a>
+        <a href="https://www.youtube.com/shorts/4gO7Wb4setE" class="btn" target="_blank">VIDEO2</a>
+    </div>
+
+    <div class="card">
+        <h2>PRUSIK</h2>
+        <div class="img-container"><span class="watermark">SA</span><img src="slike/PRUSIK.jpg" alt="Prusik"></div>
+        <a href="https://www.youtube.com/shorts/56DINm8bDh8" class="btn" target="_blank">VIDEO</a>
+    </div>
+
+    <div class="card">
+        <h2>DOUBLE SHEET BAND</h2>
+        <div class="img-container"><span class="watermark">SA</span><img src="slike/DOUBLE SHEET BAND.jpg" alt="Double Sheet Band"></div>
+        <a href="https://www.youtube.com/shorts/9XkB3Wk-57o" class="btn" target="_blank">VIDEO</a>
+    </div>
+
+    <div class="card">
+        <h2>SHEET BAND</h2>
+        <div class="img-container"><span class="watermark">SA</span><img src="slike/SHEET BAND.jpg" alt="Sheet Band"></div>
+        <a href="https://www.youtube.com/shorts/OGTZn0v_g1I" class="btn" target="_blank">VIDEO</a>
+    </div>
+
+    <div class="card">
+        <h2>SPANISH BOWLINE</h2>
+        <div class="img-container"><span class="watermark">SA</span><img src="slike/SPANISH BOWLINE.jpg" alt="Spanish Bowline"></div>
+        <a href="https://www.youtube.com/shorts/OdF00A31-G8" class="btn" target="_blank">VIDEO</a>
+    </div>
+
+    <div class="card">
+        <h2>HUNTERS</h2>
+        <div class="img-container"><span class="watermark">SA</span><img src="slike/HUNTERS.jpg" alt="Hunters"></div>
+        <a href="https://www.youtube.com/shorts/zp56BrcyCdg" class="btn" target="_blank">VIDEO</a>
+    </div>
+
+    <div class="card">
+        <h2>SHEEPSHANK</h2>
+        <div class="img-container"><span class="watermark">SA</span><img src="slike/SHEEPSHANK.jpg" alt="Sheepshank"></div>
+        <a href="https://www.youtube.com/watch?v=j_hmKwfafi8" class="btn" target="_blank">VIDEO</a>
+    </div>
+
+    <div class="card">
+        <h2>BAG KNOT</h2>
+        <div class="img-container"><span class="watermark">SA</span><img src="slike/BAG KNOT.jpg" alt="Bag Knot"></div>
+        <a href="https://www.youtube.com/shorts/5b51yqNonY0" class="btn" target="_blank">VIDEO</a>
+    </div>
+
+    <div class="card">
+        <h2>TAUT HITCH</h2>
+        <div class="img-container"><span class="watermark">SA</span><img src="slike/TAUT HITCH.jpg" alt="Taut Hitch"></div>
+        <a href="https://www.youtube.com/shorts/QgI9hOqr7uw" class="btn" target="_blank">VIDEO</a>
+    </div>
+
+    <div class="card">
+        <h2>ANCHORS</h2>
+        <div class="img-container"><span class="watermark">SA</span><img src="slike/ANCHORS.jpg" alt="Anchors"></div>
+        <a href="https://www.youtube.com/shorts/XJsBscl-tGc" class="btn" target="_blank">VIDEO</a>
+    </div>
+
+    <div class="card">
+        <h2>HANGMAN</h2>
+        <div class="img-container"><span class="watermark">SA</span><img src="slike/HANGMAN.jpg" alt="Hangman"></div>
+        <a href="https://www.youtube.com/shorts/ieq7VusSd7I" class="btn" target="_blank">VIDEO</a>
+    </div>
+
+    <div class="card">
+        <h2>SPIKE HITCH</h2>
+        <div class="img-container"><span class="watermark">SA</span><img src="slike/SPIKE HITCH.jpg" alt="Spike Hitch"></div>
+        <a href="https://www.youtube.com/shorts/M0gse6xpbKo" class="btn" target="_blank">VIDEO</a>
+    </div>
+
+    <div class="card">
+        <h2>POLE LASHING KNOT</h2>
+        <div class="img-container"><span class="watermark">SA</span><img src="slike/POLE LASHING KNOT.jpg" alt="Pole Lashing Knot"></div>
+        <a href="https://youtube.com/shorts/G4jVwl1YmeY?si=qvmW0lKuaP4mnSfv" class="btn" target="_blank">VIDEO</a>
+    </div>
+
+    <div class="card">
+        <h2>BOTTLE KNOT</h2>
+        <div class="img-container"><span class="watermark">SA</span><img src="slike/BOTTLE KNOT.jpg" alt="Bottle Knot"></div>
+        <a href="https://www.youtube.com/shorts/uwfD41FJV_0" class="btn" target="_blank">VIDEO</a>
+    </div>
+
+    <div class="card">
+        <h2>BOTTLE SLING KNOT</h2>
+        <div class="img-container"><span class="watermark">SA</span><img src="slike/BOTTLE SLING KNOT.jpg" alt="Bottle Sling Knot"></div>
+        <a href="https://www.youtube.com/shorts/e3lysKeYPXg" class="btn" target="_blank">VIDEO</a>
+    </div>
+
+ <div class="card">
+        <h2>TOWING KNOT</h2>
+        <div class="img-container"><span class="watermark">SA</span><img src="slike/TOWING KNOT.jpg" alt="Bottle Sling Knot"></div>
+        <a href="https://www.youtube.com/shorts/x7ONkilt14s" class="btn" target="_blank">VIDEO</a>
+    </div>
+ <div class="card">
+        <h2>TRUCKERS KNOT</h2>
+        <div class="img-container"><span class="watermark">SA</span><img src="slike/TRUCKERS KNOT.jpg" alt="Bottle Sling Knot"></div>
+        <a href="https://www.youtube.com/watch?v=raTYwsfnsXg" class="btn" target="_blank">VIDEO</a>
+    </div>
+
+ <div class="card">
+        <h2>HIGHWAYMANS HITCH</h2>
+        <div class="img-container"><span class="watermark">SA</span><img src="slike/HIGHWAYMANS HITCH.jpg" alt="Bottle Sling Knot"></div>
+        <a href="https://www.youtube.com/shorts/rPrph7uqvoY" class="btn" target="_blank">VIDEO1</a>
+        <a href="https://www.youtube.com/shorts/2H_zIELHVx0" class="btn" target="_blank">VIDEO2</a>
+    </div>
+ <div class="card">
+        <h2>LOOP KNOT</h2>
+        <div class="img-container"><span class="watermark">SA</span><img src="slike/LOOP KNOT.jpg" alt="Bottle Sling Knot"></div>
+        <a href="https://www.youtube.com/shorts/IocjBe10jUM" class="btn" target="_blank">VIDEO</a>
+    </div>
+
+
+</div>
+
+<script>
+    const cards = document.querySelectorAll('.card');
+    const overlay = document.getElementById('overlay');
+
+    cards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            if (e.target.classList.contains('btn')) return;
+
+            const isZoomed = this.classList.contains('zoomed');
+            cards.forEach(c => c.classList.remove('zoomed'));
+            
+            if (!isZoomed) {
+                this.classList.add('zoomed');
+                overlay.style.display = 'block';
+            } else {
+                overlay.style.display = 'none';
+            }
+        });
+    });
+
+    overlay.addEventListener('click', () => {
+        cards.forEach(c => c.classList.remove('zoomed'));
+        overlay.style.display = 'none';
+    });
+</script>
+
+</body>
+</html>
